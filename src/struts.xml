@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<!-- 配置常量 -->
+	<constant name="struts.custom.i18n.resources" value="resource" />
+	<constant name="struts.multipart.maxSize" value="10701096" />
+	<package name="TestStruts2" namespace="/user" extends="struts-default">
+	<!-- 配置全局视图 -->
+	<global-results>
+	  <result name="error">/WEB-INF/page/error.jsp</result>
+	</global-results>
+	
+	<!-- 配置HelloAction -->
+	<action name="HelloWorldAction" class="com.kxc.action.HelloWorld">
+		<result name="success">/WEB-INF/page/showhello.jsp</result>
+	</action>
+	</package>
+</struts>
